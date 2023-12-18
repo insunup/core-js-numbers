@@ -652,17 +652,7 @@ function getHypotenuse(a, b) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  if (!Number.isInteger(number) || number < 0) {
-    throw new Error('Input must be a non-negative integer');
-  }
-
-  let count = 0;
-  for (let i = 0; i <= number; i += 2) {
-    if (i % 2 !== 0) {
-      count += 1;
-    }
-  }
-  return count;
+  return Math.max(0, Math.floor((Math.abs(number) + 1) / 2));
 }
 
 module.exports = {
